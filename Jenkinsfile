@@ -21,7 +21,7 @@ stage('Test Stage'){
 
 steps{
 
-withMaven(maven:'maven_4_0_0'){
+withMaven(maven:'maven_3_5_2'){
 sh 'mvn test'
 }
 
