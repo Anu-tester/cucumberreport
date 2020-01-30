@@ -12,8 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 10242175386,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 5,
             "name": "user is already on Login Page",
@@ -24,8 +23,7 @@
           },
           {
             "result": {
-              "duration": 9733303,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 6,
             "name": "title of login page is Free CRM",
@@ -36,8 +34,7 @@
           },
           {
             "result": {
-              "duration": 258433060,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 7,
             "name": "user enters \"naveenk\" and \"test@123\"",
@@ -62,8 +59,7 @@
           },
           {
             "result": {
-              "duration": 11333726997,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 8,
             "name": "user clicks on login button",
@@ -74,8 +70,7 @@
           },
           {
             "result": {
-              "duration": 6375672,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 9,
             "name": "user is on home page",
@@ -86,8 +81,7 @@
           },
           {
             "result": {
-              "duration": 87683080,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 10,
             "name": "Close the browser",
