@@ -16,8 +16,8 @@ import cucumber.api.testng.TestNGCucumberRunner;
         features = "src/main/java/Features",
         glue = {"stepDefinitions"},
         tags = {"~@Ignore"},
-        strict=true,
-        dryRun= true,
+        strict=false,
+        dryRun= false,
         format = {
                 "pretty",
                 "html:target/cucumber-reports/cucumber-pretty",

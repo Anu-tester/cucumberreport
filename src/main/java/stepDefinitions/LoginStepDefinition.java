@@ -19,7 +19,7 @@ public class LoginStepDefinition{
 	
 	 @Given("^user is already on Login Page$")
 	 public void user_already_on_login_page(){
-	 System.setProperty("webdriver.chrome.driver","/Users/naveenkhunteta/Downloads/chromedriver");
+	 System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
 	 driver = new ChromeDriver();
 	 driver.get("https://www.freecrm.com/index.html");
 	 }
@@ -29,7 +29,7 @@ public class LoginStepDefinition{
 	 public void title_of_login_page_is_free_CRM(){
 	 String title = driver.getTitle();
 	 System.out.println(title);
-	 Assert.assertEquals("Free CRM in the cloud software boosts sales", title);
+	 Assert.assertEquals(title,"Free CRM #1 cloud software for any business large or small");
 	 }
 	
 	 //Reg Exp:
@@ -37,17 +37,19 @@ public class LoginStepDefinition{
 	 //2. \"(.*)\"
 	
 	 @Then("^user enters \"(.*)\" and \"(.*)\"$")
+	 
 	 public void user_enters_username_and_password(String username, String password){
-	 driver.findElement(By.name("username")).sendKeys(username);
+		 driver.findElement(By.xpath("//ul[@class='rd-navbar-nav']/a")).click();
+	 driver.findElement(By.name("email")).sendKeys(username);
 	 driver.findElement(By.name("password")).sendKeys(password);
 	 }
 	
 	 @Then("^user clicks on login button$")
 	 public void user_clicks_on_login_button() {
-	 WebElement loginBtn =
-	 driver.findElement(By.xpath("//input[@type='submit']"));
-	 JavascriptExecutor js = (JavascriptExecutor)driver;
-	 js.executeScript("arguments[0].click();", loginBtn);
+	// WebElement loginBtn =
+	 driver.findElement(By.xpath("//div[contains(text(),Login)]/div[3]")).click();;
+//	 JavascriptExecutor js = (JavascriptExecutor)driver;
+//	 js.executeScript("arguments[0].click();", loginBtn);
 	 }
 	
 	
@@ -55,7 +57,7 @@ public class LoginStepDefinition{
 	 public void user_is_on_hopme_page(){
 	 String title = driver.getTitle();
 	 System.out.println("Home Page title ::"+ title);
-	 Assert.assertEquals("CRMPRO", title);
+	 Assert.assertEquals(title,"Cogmento CRM");
 	 }
 	 
 	 @Then("^user moves to new contact page$")
